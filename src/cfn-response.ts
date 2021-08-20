@@ -2,7 +2,7 @@ import * as https from 'https';
 import * as url from 'url';
 
 
-enum ResponseStatus {
+export enum ResponseStatus {
   SUCCESS = 'SUCCESS',
   FAILED = 'FAILED',
 }
