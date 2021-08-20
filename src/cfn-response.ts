@@ -9,8 +9,6 @@ export enum ResponseStatus {
 
 /**
  * The CfnCustomResourceInfo should be the event as given to the Lambda function.
- *
- * @example send(event, ...);
  */
 export interface CfnCustomResourceInfo {
   StackId: string;
@@ -27,9 +25,9 @@ export interface CfnCustomResourceInfo {
 /**
  * An async send response function for CloudFormation Custom Resources.
  * Based on this blog: https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-lambda-function-code-cfnresponsemodule.html
- * @param event
- * @param responseStatus
- * @param responseData
+
+ * @example await send({ ...event, PhysicalResourceId: context.logStreamName, Status: ResponseStatus.SUCCESS, Data: {}, NoEcho: false, Reason: '' });
+ * @param event - the input event, modeled after the CloudFormation Custom Resource event type
  */
 
 export const send = function (event: CfnCustomResourceInfo): Promise<void> {
