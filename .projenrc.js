@@ -7,5 +7,6 @@ const project = new TypeScriptProject({
   authorName: 'Matthew Bonig',
   npmAccess: NpmAccess.PUBLIC,
   releaseBranches: ['main'],
+  npmTokenSecret: 'NPM_TOKEN',
 });
 project.synth();
