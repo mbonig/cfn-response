@@ -6,5 +6,6 @@ const project = new TypeScriptProject({
   authorEmail: 'matthew.bonig@gmail.com',
   authorName: 'Matthew Bonig',
   npmAccess: NpmAccess.PUBLIC,
+  releaseBranches: ['main'],
 });
 project.synth();
