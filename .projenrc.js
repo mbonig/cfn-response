@@ -8,5 +8,6 @@ const project = new TypeScriptProject({
   npmAccess: NpmAccess.PUBLIC,
   releaseBranches: ['main'],
   npmTokenSecret: 'NPM_TOKEN',
+  releaseToNpm: true,
 });
 project.synth();
